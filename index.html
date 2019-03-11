@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<h2> Search Modern Library's List of the Top Novels of All Time </h2>
+	<div id="staggered-list">
+		  <input v-model="query">
+		    <transition-group
+		      name="staggered-fade"
+	           tag="ul"
+		       v-bind:css="false"
+		       v-on:before-enter="beforeEnter"
+		       v-on:enter="enter"
+		       v-on:leave="leave"
+		     >
+		         <li
+		         v-for="(item, index) in computedList"
+		        v-bind:key="item.msg"
+		        v-bind:data-index="index"
+		      >{{ item.msg }}</li>
+			   </transition-group>
+	</div>
+</body>
+<footer>
+	<p><a href="https://github.com/J-Ridgwell/CreativeProject3" target="_blank">
+		GitHub</a></p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+<script src="script.js"></script>
+</html>

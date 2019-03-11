@@ -1,0 +1,18 @@
+input {
+  font-size: 14px;
+}
+
+
+li {
+  list-style-image: url('books_1f4da.png');
+  font-size: 19px;
+  font-family: serif;
+}
+
+
+body {
+  background-image: url('backgroundimg.jpg');
+  background-size:auto 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
